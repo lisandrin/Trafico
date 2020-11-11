@@ -1,0 +1,57 @@
+.apply{
+    width: 100%;
+    display: flex;
+
+    .content{
+        padding-top: 70px !important;
+        position: relative;
+
+        .dot{
+            position: absolute;
+            width: 120px;
+            height: 55px;
+            background-color: none;
+            display: flex;
+            top: 48%;
+            left: 60%;
+            padding: 30px;
+
+            span{
+                width: 10px;
+                height: 10px;
+                background-image: url(/imgs/talk.png);
+                background-repeat: no-repeat;
+                padding: 10px;
+                position: absolute;
+ 
+                animation-name: dot;
+                animation-duration: 2s; 
+                animation-delay: 0.2s;
+                animation-timing-function: step-end;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-fill-mode: none;
+
+                @keyframes dot {
+                    0%{
+                        left:20px;
+                    }
+                    25%{
+                        left: 40px;
+                    }
+                    50%{
+                        left: 60px;
+                    }
+                    75%{
+                        left: 80px;
+                    }
+                    100%{
+                        left: 100px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include grid-text-content; 
+}
