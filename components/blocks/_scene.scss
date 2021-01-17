@@ -16,6 +16,15 @@
         background-image: url(/imgs/bgc.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+
+        @media (max-width: 995px) { 
+            width: 100%;
+        }
+
+        @media (max-width: 555px) { 
+            height: 700px;
+            text-align: center;
+        }
         
     }
     .mask{
@@ -28,6 +37,14 @@
         background-image: url(/imgs/mask-group.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+
+        @media (max-width: 995px) { 
+            width: 100%;
+        }
+
+        @media (max-width: 555px) { 
+            height: 700px;
+        }
 
         &:after{
             width: 50%;
@@ -47,6 +64,19 @@
             animation-iteration-count: infinite;
             animation-direction: alternate;
             animation-fill-mode: none;
+
+            @media (max-width: 995px) { 
+                top:80%;
+                animation: none;
+            }
+
+            @media (max-width: 812px) { 
+                top:75%;
+                animation: none;
+            }
+            @media (max-width: 701px) { 
+                display: none;
+            }
 
             @keyframes car {
                 0%{
@@ -75,6 +105,10 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom right;
+
+        @media (max-width: 995px) { 
+            display: none;
+        }
 
         .box{
             position: absolute; 
@@ -134,6 +168,10 @@
         padding-bottom: 7%;
         padding-left: 10%;
 
+        @media (max-width: 995px) { 
+            grid-template-columns: 1fr;
+        }
+
         .text{
             width: 100%;
             min-height: 420px;
@@ -150,6 +188,10 @@
                 line-height: normal;
                 letter-spacing: 1.5px;
                 padding-bottom: 20px;
+
+                @media (max-width: 555px) { 
+                    font-size: 55px;
+                }
             }
 
             .btn{

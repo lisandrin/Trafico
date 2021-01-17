@@ -2,8 +2,8 @@
     width: 100%;
     display: flex;
     position: relative;
-    height: 620px;
-    margin-top: 10%;
+    height: auto;
+    margin-top: 5%;
 
     .footer-bgc{
         position: absolute;
@@ -28,12 +28,21 @@
         background-size: contain;
         z-index: -1;
         top: 25%;
+
+        @media (max-width: 802px) {
+            width: 100%;
+        }
+
+        @media (max-width: 578px) {
+            display: none;
+        }
     }
 
     .footer-content{
         width: 100%;
         display: inline-block;
-        min-height: 620px; 
+        height: auto; 
+        padding-bottom: 4em;
 
         .footer-car{
             width: 350px;
@@ -71,12 +80,24 @@
 
         .contact-us{
             width: 100%;
+            height: auto;
             background-color:none;
             display: grid;
             grid-template-columns: 40% 40%;
             padding-top: 100px;
 
-            .ask{
+            
+
+            @media (max-width: 903px) {
+                grid-template-columns: 1fr;
+                padding: 3em;
+            }
+
+            @media (max-width: 578px) {
+                padding: 0;
+            }
+
+            .ask{ 
                 width: 100%;
                 height: 400px;
                 display: inline-block;
@@ -84,7 +105,15 @@
                 padding:50px;
                 padding-top: 40%;
 
-                .text{
+                @media (max-width: 903px) {
+                    padding-top: 35%;
+                }
+
+                @media (max-width: 491px) {
+                    padding: 15em 0em 1em 1em;
+                }
+
+                .text{  
                     width: 350px;
                     height: 140px;
                     padding:20px;
@@ -95,7 +124,7 @@
             .input-form{
                 display: inline-block;
                 padding: 50px;
-                padding-top: 15%;
+                padding-top: 10%;
                 background-color: #fff;
                 border-radius: 20px;
                 width: 100%;
@@ -103,27 +132,31 @@
                 align-items: center;
                 justify-content: center;
 
+
+                input{
+                    width: 100%;
+                    height: 60px;
+                    padding: 10px;
+                    outline: none;
+                    border-radius: 0.5em;
+                    border: 0.01em solid #333;
+                    margin-bottom: 1.3em;
+                }
+
+                p{
+                    padding-bottom: 1em;
+                }
+
                 .name{
                     width: 100%;
                     display: inline-block;
-
-                    input{
-                        width: 400px;
-                        height: 60px;
-                        padding: 10px;
-                        
-                    }
+                    padding-top: 20px;
+                    
                 }
 
                 .email{
                     width: 100%;
                     display: inline-block;
-
-                    input{
-                        width: 400px;
-                        height: 60px;
-                        padding: 10px;
-                    }
                 }
 
                 @include btn;

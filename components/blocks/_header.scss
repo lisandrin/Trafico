@@ -40,6 +40,13 @@ header{
       justify-content: center;
       text-decoration: none;
 
+      @media (max-width: 1200px) { 
+        padding-left: 8%;
+      }
+      @media (max-width: 1027px) { 
+        display: none;
+      }
+
       li{
         width: 150px;
         list-style: none;
