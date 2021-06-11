@@ -28,6 +28,7 @@ body {
 
 header {
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,28 +36,37 @@ header {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
   z-index: 999;
   background-color: transparent;
 }
 
 header .header-content {
   width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 20% 70%;
-      grid-template-columns: 20% 70%;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
-  height: 125px;
-  padding-top: 30px;
-  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+}
+
+@media (max-width: 778px) {
+  header .header-content {
+    display: inline-block;
+    text-align: center;
+  }
 }
 
 header .header-content .logo {
-  width: 100%;
+  width: 20%;
   padding: 10px;
   display: inline-block;
+}
+
+@media (max-width: 778px) {
+  header .header-content .logo {
+    width: 100%;
+  }
 }
 
 header .header-content .logo img {
@@ -66,53 +76,34 @@ header .header-content .logo img {
 
 header .header-content ul {
   width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   list-style: none;
   background-color: transparent;
-  padding-left: 24%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
 }
 
-@media (max-width: 1200px) {
-  header .header-content ul {
-    padding-left: 8%;
-  }
-}
-
-@media (max-width: 1027px) {
-  header .header-content ul {
-    display: none;
-  }
-}
-
 header .header-content ul li {
-  width: 150px;
   list-style: none;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
   line-height: 18.96px;
   vertical-align: middle;
-  padding-top: 30px;
+  margin-top: 2em;
 }
 
 header .header-content ul li a {
   text-decoration: none;
-  padding: 20px;
+  padding: 18px 35px 18px 35px;
   color: #fff;
 }
 
 header .header-content ul li a:hover {
-  width: 158px;
-  height: 60.05;
   background-color: #EE4D47;
   color: #fff;
   border-radius: 5px;
@@ -122,8 +113,7 @@ header .header-content ul li a:hover {
 }
 
 header .header-content ul li .hov {
-  width: 158px;
-  height: 60.05;
+  padding: 1em;
   background-color: #EE4D47;
   color: #fff;
   border-radius: 5px;
@@ -136,10 +126,12 @@ header .header-content ul li .hov {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 798px;
+  height: auto;
   position: relative;
   background-color: transparent;
   z-index: 800;
+  padding-bottom: 8em;
+  padding-top: 2em;
 }
 
 .scene .bg-color {
@@ -148,7 +140,7 @@ header .header-content ul li .hov {
   left: 0;
   width: 80%;
   background-color: transparent;
-  height: 620px;
+  height: 100%;
   background-image: url(/imgs/bgc.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -374,30 +366,30 @@ header .header-content ul li .hov {
 
 .scene .scene-content {
   width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
-  padding-bottom: 7%;
-  padding-left: 10%;
-}
-
-@media (max-width: 995px) {
-  .scene .scene-content {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  padding-top: 4em;
+  padding-left: 3em;
+  padding-bottom: 4em;
 }
 
 .scene .scene-content .text {
-  width: 100%;
-  min-height: 420px;
+  width: 50%;
   display: inline-block;
   background-color: transparent;
   z-index: 7;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5em;
+}
+
+@media (max-width: 1177px) {
+  .scene .scene-content .text {
+    width: 100%;
+  }
 }
 
 .scene .scene-content .text h1 {
@@ -1273,7 +1265,7 @@ header .header-content ul li .hov {
 
 .slider .slider-content .slider-bar .card {
   width: 100%;
-  height: 350px;
+  height: auto;
   padding: 30px;
   display: inline-block;
   background-color: #fff;
